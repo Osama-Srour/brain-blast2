@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/brain-blast/static/css/main.6ba3fbb4.css",
+    "main.js": "/brain-blast/static/js/main.c2d80e55.js",
+    "static/js/453.b862d767.chunk.js": "/brain-blast/static/js/453.b862d767.chunk.js",
+    "static/media/logo.svg": "/brain-blast/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/brain-blast/index.html",
+    "main.6ba3fbb4.css.map": "/brain-blast/static/css/main.6ba3fbb4.css.map",
+    "main.c2d80e55.js.map": "/brain-blast/static/js/main.c2d80e55.js.map",
+    "453.b862d767.chunk.js.map": "/brain-blast/static/js/453.b862d767.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6ba3fbb4.css",
+    "static/js/main.c2d80e55.js"
+  ]
+}
