@@ -6,7 +6,7 @@ const useQuestion = () => {
     const [questionlist, setQuestionlist] = useState([]);
 
     useEffect(() => {
-        fetch("https://opentdb.com/api.php?amount=10&type=multiple")
+        fetch("https://opentdb.com/api.php?amount=10&type=multiple&encode=url3986")
             .then(res => res.json())
             .then(data => {
                 if (data.results) {
