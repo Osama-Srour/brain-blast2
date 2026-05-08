@@ -1,23 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
+import Question from './Question';
+import useQuestion from './useQuestion';
+import Result from './Result';
 
 function App() {
+
+  const { questionlist, state, handleSelection } = useQuestion()
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {(questionlist[0]) ?
+        <>
+          <nav>
+            <h1>Question Namber :{state.currentquestionNum}</h1>
+            <h1>Score: {state.score}</h1>
+          </nav>
+          {state.isFinished ? <Result state={state}  ></Result> : <Question state={state} currentQuestion={state.currentQuestion} handleSelection={handleSelection}></Question>}
+
+        </> :
+        <h1>loading...</h1>}
     </div>
   );
 }
