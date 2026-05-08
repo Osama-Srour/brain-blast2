@@ -9,10 +9,11 @@ const useQuestion = () => {
         fetch("https://opentdb.com/api.php?amount=10&type=multiple")
             .then(res => res.json())
             .then(data => {
+                if(!data.results){
                 setQuestionlist(data.results);
                 console.log(questionlist);
                 console.log(Array.isArray(data.results))
-                if(data.results[0]){
+                
                     setState({
                     ...state, currentQuestion: {
                         text: data.results[0].question,
@@ -25,7 +26,8 @@ const useQuestion = () => {
                 })
 
                 }
-            })
+            }).catch(err => console.log("API Error:", err))
+
     }, [])
 
 
