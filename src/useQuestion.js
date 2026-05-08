@@ -9,22 +9,24 @@ const useQuestion = () => {
         fetch("https://opentdb.com/api.php?amount=10&type=multiple")
             .then(res => res.json())
             .then(data => {
-                if(!data.results){
-                setQuestionlist(data.results);
-                console.log(questionlist);
-                console.log(Array.isArray(data.results))
-                
+                if (!data.results) {
+                    setQuestionlist(data.results);
+                    console.log(questionlist);
+                    console.log(Array.isArray(data.results))
                     setState({
-                    ...state, currentQuestion: {
-                        text: data.results[0].question,
-                        correctAnswer: data.results[0].correct_answer,
-                        answer: [...data.results[0].incorrect_answers, data.results[0].correct_answer],
-                        isCorrect: null,
-                        selectedOption: 0,
+                        ...state, currentQuestion: {
+                            text: data.results[0].question,
+                            correctAnswer: data.results[0].correct_answer,
+                            answer: [...data.results[0].incorrect_answers, data.results[0].correct_answer],
+                            isCorrect: null,
+                            selectedOption: 0,
 
-                    }
-                })
+                        }
 
+                    })
+
+                } else {
+                    console.log(No data);
                 }
             }).catch(err => console.log("API Error:", err))
 
