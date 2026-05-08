@@ -11,7 +11,7 @@ function App() {
 
   return (
     <div className="App">
-      {(questionlist[0]) ?
+      {(questionlist[0] != null) ?
         <>
           <nav>
             <h1>Question Namber :{state.currentquestionNum}</h1>
