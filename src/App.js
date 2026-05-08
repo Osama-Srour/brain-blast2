@@ -20,7 +20,7 @@ function App() {
           {state.isFinished ? <Result state={state}  ></Result> : <Question state={state} currentQuestion={state.currentQuestion} handleSelection={handleSelection}></Question>}
 
         </> :
-        <h1>loading...</h1>}
+        <h1>loading...!!</h1>}
     </div>
   );
 }
